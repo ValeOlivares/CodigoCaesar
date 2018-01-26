@@ -1,8 +1,31 @@
 {
-  "name": "C�digo cesar",
-  "version": "1.0",
+  "name": "codigocaesar",
+  "version": "1.0.0",
+  "description": "this code codify and decodiphy based on Caesar Code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ValeOlivares/CodigoCaesar.git"
+  },
+  "keywords": [
+    "caesar",
+    "code"
+  ],
+  "author": "Valentina Neira Olives - valentinaolivares85@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ValeOlivares/CodigoCaesar/issues"
+  },
+  "homepage": "https://github.com/ValeOlivares/CodigoCaesar#readme",
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-config-google": "^0.9.1"
+  },
   "dependencies": {
-    "bootstrap": "^3.3.7",
     "materialize-css": "^0.100.2"
   }
 }

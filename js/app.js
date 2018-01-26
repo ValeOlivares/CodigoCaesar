@@ -1,25 +1,23 @@
 function cipher() {
   var text = document.getElementById('text').value;
-  var newMsje = [] ;
+  var newMsje = '' ;
   for (var i = 0; i < text.length; i++) {
-    var char = text[i];
-    var ascii = char.charCodeAt(0); 
-    var move = (((ascii - 65 + 33) % 26) + 65);
-    var cipherMsje = String.fromCharCode(move); // pasamos el ASCII a letras nuevamente
-    newMsje.push(cipherMsje);
-    var joinMsje = newMsje.join('');
-    var nContenedor = document.createElement('div');
-    var nCaja = document.getElementById('caja3');
-    var parrafo = document.createElement('p');
-    var nodoText = document.createTextNode(joinMsje);
-    parrafo.appendChild(nodoText);
-    nContenedor.appendChild(parrafo);
-    nCaja.appendChild(nContenedor);
+    var char = (text.charCodeAt(i) - 65 + 33) % 26 + 65; // pasar letras a código ASCII
+    console.log(newMsje);
+    newMsje += String.fromCharCode(char); // pasamos el ASCII a letras nuevamente
   }
+  document.getElementById('cipherText').innerHTML = (newMsje); //modificando HTML para ingresar cifrado
 }
 cipher();
 
 function decipher() {
-  
+    var text = document.getElementById('text').value;
+  var newMsjeDec = '' ;
+  for (var j = 0; j < text.length; j++) {
+    var charDec = (text.charCodeAt(j) - 65 + 33) % 26 + 65; // pasar letras a código ASCII
+    console.log(newMsjeDec);
+    newMsjeDec += String.fromCharCode(charDec); // pasamos el ASCII a letras nuevamente
+  }
+  document.getElementById('decipherText').innerHTML = (newMsjeDec); //modificando HTML para ingresar cifrado
 }
 decipher();
